@@ -1,3 +1,16 @@
+<!DOCTYPE HTML>
 <html>
-	<p> Hi there!</p>
+	<head>
+		<title>my test blog</title>
+	</head>
+	<body>
+		<h1> Senaps's test blog! </h1>
+		<p>senaps's handwritings! :)</p>
+		{% for post in posts %}
+			<div>
+			<h2><a href="">{{post.title}}</a></h2>
+			<p> Pulished:{{post.published_date}}</p>
+			<p> {{post.text|linebreaks}}</p>
+		{% endfor %}
+	</body>
 </html>
